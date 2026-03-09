@@ -83,8 +83,8 @@ public:
             label->render();
         }
     }
-    Button(Label *label, Vector2 location, Vector2 size = {-1, -1}, bool interactive = false, bool isGraphical = false, Texture2D unselected = Texture2D(), Texture2D selected = Texture2D(), float padding = 5, Color tint = GRAY, Color selectedTint = LIGHTGRAY, Color labelTint = WHITE)
-        : label(label), location(location), size(size), interactive(interactive), isGraphical(isGraphical), unselected(unselected), selected(selected), tint(tint), selectedTint(selectedTint)
+    Button(Label *label, Vector2 location, Vector2 size = {-1, -1}, bool interactive = false, bool isGraphical = false, Texture2D unselected = Texture2D(), Texture2D selected = Texture2D(),void (*function)() = nullptr, float padding = 5, Color tint = GRAY, Color selectedTint = LIGHTGRAY, Color labelTint = WHITE)
+        : label(label),function(function), location(location), size(size), interactive(interactive), isGraphical(isGraphical), unselected(unselected), selected(selected), tint(tint), selectedTint(selectedTint)
     {
         if (size.x < 0 || size.y < 0)
         {
