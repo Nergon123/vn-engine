@@ -1,7 +1,9 @@
 CC = g++
-CFLAGS = -lraylib
+CFLAGS = -lraylib -g
 SRC = src/main.cpp \
-	  src/Render.cpp
+	  src/Render.cpp \
+	  src/Scene.cpp \
+	  src/Parser.cpp
 
 OBJ = $(SRC:.cpp=.o)
 TARGET = vn

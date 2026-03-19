@@ -1,15 +1,12 @@
-#include <raylib.h>
 #include "Render.h"
-int main()
-{
+#include <raylib.h>
+int main() {
     InitWindow(1280, 720, "Hello world");
     setupRender();
     SetTargetFPS(GetMonitorRefreshRate(GetCurrentMonitor()));
-    while (!WindowShouldClose())
-    {
+    while (!WindowShouldClose()) {
         BeginDrawing();
         renderLoop();
         EndDrawing();
-        printf("fps:%d\n", GetFPS());
     }
 }
